@@ -963,15 +963,31 @@ def setup_llm_client() -> Tuple[OpenAI, str]:
         except Exception as e:
             print(f"[连接] ❌ Kimi API 初始化失败: {e}")
     
-    print("[连接] 使用 Pollination AI (免费)")
-    client = OpenAI(api_key="pollination", base_url="https://text.pollinations.ai/openai")
-    return client, "pollination"
-
+    # print("[连接] 使用 Pollination AI (免费)")
+    # client = OpenAI(api_key="pollination", base_url="https://text.pollinations.ai/openai")
+    # return client, "pollination"
+    
+        # 无可用 API，提示用户并退出
+    print("\n" + "="*70)
+    print("❌ 未配置任何可用的 LLM API")
+    print("="*70)
+    print("请设置以下环境变量之一：")
+    print("  export DEEPSEEK_API_KEY='your-deepseek-api-key'")
+    print("  export MOONSHOT_API_KEY='your-moonshot-api-key'")
+    print("Windows: ")
+    print("$env:DEEPSEEK_API_KEY =your_api_key_here")
+    print("$env:MOONSHOT_API_KEY =your_api_key_here")
+    print("\n获取 API Key：")
+    print("  - DeepSeek: https://platform.deepseek.com")
+    print("  - Kimi: https://platform.moonshot.cn")
+    print("="*70)
+    
+    sys.exit(1)
+    
 def main():
     """交互式主入口"""
     print("="*70)
     print("动态代码生成系统 (FSM + RAG + REPL执行 + 运行时反馈 + 自动模块管理)")
-    print("修复版：增强网络错误处理、添加备用搜索引擎")
     print("="*70)
     
     client, provider = setup_llm_client()
