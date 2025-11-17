@@ -57,12 +57,7 @@ ANALYZE → DESIGN → IMPLEMENT → DYNAMIC_VALIDATE → TERMINAL (成功)
 项目依赖于以下主要包（详见requirements.txt）：
 
 ```bash
-pip install openai
-pip install requests
-pip install beautifulsoup4
-pip install fake-useragent
-pip install curl_cffi
-# 以及其他在requirements.txt中列出的包
+pip install -r requirements.txt
 ```
 
 ## 使用方法
@@ -80,8 +75,11 @@ pip install curl_cffi
 
 2. **配置API密钥**：
    ```bash
-   # 设置环境变量
-   export OPENAI_API_KEY=your_api_key_here
+   # 设置环境变量(支持deepseek, kimi api)
+   export DEEPSEEK_API_KEY=your_api_key_here
+   export MOONSHOT_API_KEY=your_api_key_here
+   $env:DEEPSEEK_API_KEY =your_api_key_here
+   $env:MOONSHOT_API_KEY =your_api_key_here
    # 或在代码中直接配置
    ```
 
