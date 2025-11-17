@@ -80,8 +80,11 @@ pip install curl_cffi
 
 2. **配置API密钥**：
    ```bash
-   # 设置环境变量
-   export OPENAI_API_KEY=your_api_key_here
+   # 设置环境变量(支持deepseek, kimi api)
+   export DEEPSEEK_API_KEY=your_api_key_here
+   export MOONSHOT_API_KEY=your_api_key_here
+   $env:DEEPSEEK_API_KEY =your_api_key_here
+   $env:MOONSHOT_API_KEY =your_api_key_here
    # 或在代码中直接配置
    ```
 
