@@ -997,7 +997,7 @@ def main():
     user_input = input("> ").strip()
     
     if user_input.lower() == "demo":
-        prd = "实现一个带错误处理的爬虫功能，支持Google搜索和百度搜索作为备用"
+        prd = "请生成一个数据质量监控python代码，要求可以验证个人身份信息，信息表有10个常见字段，如身份证号码，地 址，个人名字，性别，年龄，学历，工资，银行账号等"
         print(f"\n使用示例需求: {prd}")
     elif not user_input:
         print("输入不能为空!")
