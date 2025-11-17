@@ -803,7 +803,7 @@ class ContextCompressor:
         self.context_window.append(item)
         self._enforce_limit()
 
-    def _summarize(self, text: str, max_len: int = 150) -> str:
+    def _summarize(self, text: str, max_len: int = 1500) -> str:
         return text if len(text) <= max_len else text[:max_len] + "... [truncated]"
 
     def _enforce_limit(self):
