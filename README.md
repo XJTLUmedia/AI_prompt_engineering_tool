@@ -57,12 +57,7 @@ ANALYZE → DESIGN → IMPLEMENT → DYNAMIC_VALIDATE → TERMINAL (成功)
 项目依赖于以下主要包（详见requirements.txt）：
 
 ```bash
-pip install openai
-pip install requests
-pip install beautifulsoup4
-pip install fake-useragent
-pip install curl_cffi
-# 以及其他在requirements.txt中列出的包
+pip install -r requirements.txt
 ```
 
 ## 使用方法
